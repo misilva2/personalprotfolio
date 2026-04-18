@@ -11,50 +11,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;900&family=Sora:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="projects" data-theme="day">
     <div class="background-layer" aria-hidden="true"></div>
+    <div class="page-progress" aria-hidden="true">
+      <span class="page-progress-bar"></span>
+    </div>
 
     <header class="site-header" id="top">
-      <div class="brand">Projects by Micka Silva</div>
-      <div>
-        <a class="primary-link" href="index.html">Home</a>
-        <a class="primary-link" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noreferrer"
-          >SouthernArizonaMarketingSystems.com</a
-        >
+      <div class="brand-block">
+        <div class="brand">Projects by Micka Silva</div>
+        <p class="brand-caption">Case studies, proof, and a little desert weather in the margins.</p>
+      </div>
+      <div class="header-actions">
+        <div class="nav-links">
+          <a class="primary-link" href="index.html">Home</a>
+          <a class="primary-link" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noreferrer"
+            >SouthernArizonaMarketingSystems.com</a
+          >
+        </div>
+        <button class="mode-toggle" type="button" aria-label="Switch color mode">After Dark</button>
       </div>
     </header>
 
     <main>
       <section class="hero reveal">
-        <p class="eyebrow">Projects Portfolio</p>
-        <h1>
-          Work across
-          <span>web design, business,</span>
-          and music.
-        </h1>
-        <p class="lead">
-          These projects reflect how I build digital presence, grow real-world revenue, and create sound as
-          Money Meeks.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-solid" href="#web-design">Web Design</a>
-          <a class="btn btn-ghost" href="#business">Business</a>
-          <a class="btn btn-ghost" href="#music">Music</a>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Selected Work • Live Projects</p>
+            <h1>
+              Case studies in
+              <span>web design, business,</span>
+              and sound.
+            </h1>
+            <p class="lead">
+              This page is where the portfolio stops speaking in broad strokes. Each lane shows what I built,
+              how I approached it, and why it matters outside the screen.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-solid" href="#web-design">Web Design</a>
+              <a class="btn btn-ghost" href="#business">Business</a>
+              <a class="btn btn-ghost" href="#music">Music</a>
+            </div>
+          </div>
+          <aside class="hero-notes">
+            <p class="section-label">Working Method</p>
+            <ul class="meta-list">
+              <li><span>Lens</span> Story first, system close behind</li>
+              <li><span>Build</span> Static-first, fast, responsive, clear</li>
+              <li><span>Focus</span> Atmosphere, trust, and conversion</li>
+              <li><span>Output</span> Sites, strategy, campaigns, songs</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
+      <section class="section-intro reveal">
+        <p class="section-label">Case Studies</p>
+        <h2>Proof with atmosphere</h2>
+        <p>
+          The goal is not just to make things look good. It is to give each project a point of view, a clear
+          function, and enough polish that people remember it.
+        </p>
+      </section>
+
       <section class="projects-grid">
-        <article id="web-design" class="project-card reveal">
+        <article id="web-design" class="project-card featured reveal">
           <h2>Web Design Projects</h2>
           <p>
             Website builds focused on modern visuals, clear messaging, and conversion-friendly structure for
             local businesses and personal brands.
           </p>
+          <p>
+            <strong>The Arctic Circle Website</strong> is a web development and design project for a Bisbee,
+            AZ hospitality venue. It gives visitors a clear look at events, atmosphere, and updates while
+            making it easy to connect with the brand online.
+            <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noreferrer">View the site</a>.
+          </p>
+          <div class="project-meta">
+            <p><span>Role</span> Design, development, content structure</p>
+            <p><span>Goal</span> Build a digital home for the venue and its energy</p>
+            <p><span>Result</span> Stronger online presence with clearer event and brand storytelling</p>
+          </div>
           <ul>
             <li>Landing page design and mobile optimization</li>
             <li>Brand-aligned messaging and content layout</li>
@@ -71,6 +113,7 @@
           <ul>
             <li>Co-founding and scaling Southern Arizona Marketing Systems</li>
             <li>Hospitality leadership and event operations at The Arctic Circle</li>
+            <li>Built and launched The Arctic Circle website to strengthen digital presence</li>
             <li>Sold out two consecutive weekends and grossed over $10,000 in three weeks</li>
           </ul>
         </article>
@@ -81,6 +124,10 @@
             Original releases and artist development as Money Meeks, with full creative involvement from writing
             to production.
           </p>
+          <div class="project-meta">
+            <p><span>Role</span> Writer, performer, producer</p>
+            <p><span>Focus</span> Build a sound with clear authorship and visual identity</p>
+          </div>
           <ul>
             <li>Rap songwriting and vocal performance</li>
             <li>Beat production and arrangement</li>
@@ -89,7 +136,32 @@
         </article>
       </section>
 
+      <section class="field-notes reveal">
+        <div class="section-intro">
+          <p class="section-label">Process</p>
+          <h2>How I shape a build</h2>
+        </div>
+        <div class="timeline compact">
+          <article class="timeline-entry reveal">
+            <p class="timeline-tag">01</p>
+            <h3>Find the atmosphere</h3>
+            <p>Each project starts with a mood, a story, and a reason to exist.</p>
+          </article>
+          <article class="timeline-entry reveal">
+            <p class="timeline-tag">02</p>
+            <h3>Engineer the structure</h3>
+            <p>I organize the page around clarity, trust, and what the visitor needs next.</p>
+          </article>
+          <article class="timeline-entry reveal">
+            <p class="timeline-tag">03</p>
+            <h3>Polish until it feels authored</h3>
+            <p>Typography, pacing, responsiveness, and detail are where the project becomes memorable.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="contact reveal">
+        <p class="section-label">Continue</p>
         <h2>Explore More</h2>
         <p>View the full profile, social media, and contact options on the main portfolio page.</p>
         <div class="contact-actions">

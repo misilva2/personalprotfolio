@@ -11,54 +11,88 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;900&family=Sora:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="home" data-theme="day">
     <div class="background-layer" aria-hidden="true"></div>
+    <div class="page-progress" aria-hidden="true">
+      <span class="page-progress-bar"></span>
+    </div>
 
     <header class="site-header" id="top">
-      <div class="brand">Built in Bisbee, Powered by Vision</div>
-      <div>
-        <a class="primary-link" href="projects.html">Projects</a>
-        <a class="primary-link" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noreferrer"
-          >SouthernArizonaMarketingSystems.com</a
-        >
-        <a class="primary-link" href="https://www.linkedin.com/in/michaela-silva-436a8a24b" target="_blank" rel="noreferrer"
-          >LinkedIn Profile</a
-        >
+      <div class="brand-block">
+        <div class="brand">Built in Bisbee, Powered by Vision</div>
+        <p class="brand-caption">Field notes from the desert, the studio, and the browser.</p>
+      </div>
+      <div class="header-actions">
+        <div class="nav-links">
+          <a class="primary-link" href="projects.html">Projects</a>
+          <a class="primary-link" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noreferrer"
+            >SouthernArizonaMarketingSystems.com</a
+          >
+          <a class="primary-link" href="https://www.linkedin.com/in/michaela-silva-436a8a24b" target="_blank" rel="noreferrer"
+            >LinkedIn Profile</a
+          >
+        </div>
+        <button class="mode-toggle" type="button" aria-label="Switch color mode">After Dark</button>
       </div>
     </header>
 
     <main>
       <section class="hero reveal">
-        <p class="eyebrow">Entrepreneur • Marketer • Artist</p>
-        <h1>
-          I am Micka Silva,
-          <span>shape culture,</span>
-          and make records as Money Meeks.
-        </h1>
-        <p class="lead">
-          From scaling brands through Southern Arizona Marketing Systems to managing The Arctic Circle in
-          Bisbee, AZ, I blend strategy, leadership, and sound.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-solid" href="projects.html">View Projects Page</a>
-          <a class="btn btn-ghost" href="#about">About Me</a>
-          <a class="btn btn-ghost" href="#work">See My Focus</a>
-          <a class="btn btn-ghost" href="#social">All Social Links</a>
-          <a class="btn btn-ghost" href="#contact">Book a Call</a>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Field Journal 01 • Builder / Artist / Operator</p>
+            <h1>
+              I build worlds in the browser,
+              <span>shape culture in real life,</span>
+              and make records as Money Meeks.
+            </h1>
+            <p class="lead">
+              This portfolio is my digital field journal, part case study, part manifesto. From Southern Arizona
+              Marketing Systems to The Arctic Circle to music releases and web builds, I make work that carries
+              story, traction, and atmosphere.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-solid" href="projects.html">Open Selected Work</a>
+              <a class="btn btn-ghost" href="#about">Read the Story</a>
+              <a class="btn btn-ghost" href="#field-notes">Field Notes</a>
+              <a class="btn btn-ghost" href="#contact">Build With Me</a>
+            </div>
+          </div>
+          <aside class="hero-notes">
+            <p class="section-label">Current Coordinates</p>
+            <ul class="meta-list">
+              <li><span>Base</span> Bisbee, Arizona</li>
+              <li><span>Mode</span> Dirt-bag chic meets dark academia</li>
+              <li><span>Craft</span> Web design, systems, music, and storytelling</li>
+              <li><span>Proof</span> Real clients, real launches, real traction</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
       <section id="about" class="about reveal">
+        <p class="section-label">Identity</p>
         <h2>About Me</h2>
         <p>
           I am <strong>Micka Silva</strong>, also known as <strong>Money Meeks</strong>. I am a student at
           Arizona State University pursuing a degree in biomedical science, and I plan to continue my education
           to become a physician assistant.
+        </p>
+        <p>
+          I am a builder of worlds, some made of code and others made of rhythm and rhyme. With a background in
+          anthropology and a passion for web development, I look at life through a lens of systems and
+          storytelling. My creative process is fueled by poetry and songwriting, often inspired by the cinematic
+          landscapes of the Southwest.
+        </p>
+        <p>
+          Life is not all data and stanzas, though. I am just as likely to be deep in a video game universe as
+          I am out in the mud on four-wheelers. My perfect weekend balances a morning of fishing or hiking with
+          an evening at the desk, building something new for the web.
         </p>
         <p>
           I am an owner and co-founder of <strong>Southern Arizona Marketing Systems</strong>, where I help
@@ -67,6 +101,15 @@
         <p>
           I work alongside my dad and aunt, who are owners of The Arctic Circle in Bisbee, AZ. With me in
           charge, The Arctic sold out two weekends in a row and grossed over $10,000 in three weeks.
+        </p>
+      </section>
+
+      <section class="section-intro reveal">
+        <p class="section-label">Selected Work</p>
+        <h2>Three lanes, one point of view</h2>
+        <p>
+          The thread running through all of it is the same: make something memorable, make it useful, and give
+          it enough edge that it does not disappear into the background.
         </p>
       </section>
 
@@ -89,6 +132,11 @@
           <p>
             I am a <strong>5% owner and manager of The Arctic Circle in Bisbee, AZ</strong>, where operations,
             team leadership, and guest experience all meet at a high level.
+          </p>
+          <p>
+            I also developed and designed
+            <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noreferrer">the Arctic Circle website</a>,
+            a digital home that highlights the venue, events, and overall brand experience.
           </p>
           <p>
             <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noreferrer">Visit The Arctic Circle</a>
@@ -121,13 +169,52 @@
       </section>
 
       <section class="statement reveal">
+        <p class="section-label">Manifesto</p>
         <p>
           I believe business and art are both vehicles for impact. My mission is to build systems that create
           momentum, then turn that momentum into legacy.
         </p>
       </section>
 
+      <section id="field-notes" class="field-notes reveal">
+        <div class="section-intro">
+          <p class="section-label">Field Notes</p>
+          <h2>What feeds the work</h2>
+          <p>
+            The site is not just a list of credentials. It is closer to a notebook: places I draw from,
+            disciplines I move between, and the kind of weekends that remind me why I build at all.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-entry reveal">
+            <p class="timeline-tag">Outdoors</p>
+            <h3>Trail dust, lakes, and long mornings</h3>
+            <p>
+              Fishing, hiking, and being outside reset the pace. They keep the work grounded and keep me close
+              to the landscapes that shape my creative eye.
+            </p>
+          </article>
+          <article class="timeline-entry reveal">
+            <p class="timeline-tag">Play</p>
+            <h3>Games, engines, and other worlds</h3>
+            <p>
+              I pay attention to how worlds are built, whether that means level design, pacing, sound, or the
+              systems that make a digital space feel alive.
+            </p>
+          </article>
+          <article class="timeline-entry reveal">
+            <p class="timeline-tag">Craft</p>
+            <h3>Desk light after sunset</h3>
+            <p>
+              The perfect close to the day is still a new build, a new layout, a new hook, or a smarter system
+              taking shape on the screen.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section id="social" class="social reveal">
+        <p class="section-label">Links</p>
         <h2>All Social Media Links</h2>
         <p>Connect with Micka Silva and Money Meeks across every platform.</p>
         <div class="social-grid">
@@ -147,6 +234,7 @@
       </section>
 
       <section id="contact" class="contact reveal">
+        <p class="section-label">Next Move</p>
         <h2>Let’s Build Something Real</h2>
         <p>
           Looking for marketing strategy, business leadership, or creative collaboration? Reach out and let’s
