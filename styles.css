@@ -4,11 +4,12 @@
   --paper-deep: #dfcbb9;
   --stone: #8d7665;
   --clay: #b45a32;
-  --sage: #258ea3;
+  --sage: #155f72;
   --pine: #c14f99;
   --night: #09070c;
-  --neon-cyan: #2aaed1;
+  --neon-cyan: #1e6f86;
   --neon-magenta: #c14f99;
+  --focus-ring: #0d728c;
   --mist: rgba(255, 247, 238, 0.74);
   --line: rgba(42, 27, 31, 0.14);
   --line-strong: rgba(42, 27, 31, 0.24);
@@ -26,11 +27,12 @@ body[data-theme="night"] {
   --paper-deep: #13101a;
   --stone: #bca28a;
   --clay: #d06d3f;
-  --sage: #7ad9cc;
+  --sage: #9cf1e5;
   --pine: #ff8cd7;
   --night: #040308;
-  --neon-cyan: #78ddff;
+  --neon-cyan: #8ce7ff;
   --neon-magenta: #ff8cd7;
+  --focus-ring: #8ce7ff;
   --mist: rgba(18, 14, 24, 0.74);
   --line: rgba(244, 237, 248, 0.14);
   --line-strong: rgba(244, 237, 248, 0.24);
@@ -53,9 +55,42 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
   line-height: 1.68;
   overflow-x: hidden;
   transition: background-color 220ms ease, color 220ms ease;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0.45rem;
+  transform: translateY(-140%);
+  padding: 0.6rem 0.85rem;
+  border-radius: 10px;
+  background: #0e2e39;
+  color: #f6fcff;
+  font: 600 0.88rem/1 "IBM Plex Mono", monospace;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .background-layer {
@@ -153,6 +188,7 @@ body[data-theme="night"] .brand-caption {
   font: 600 0.88rem/1 "IBM Plex Mono", monospace;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  padding: 0.5rem 0.32rem;
   border-bottom: 1px solid transparent;
   transition: color 180ms ease, border-color 180ms ease;
 }
@@ -385,7 +421,7 @@ body[data-theme="night"] .meta-list li {
 .btn-ghost {
   background: rgba(88, 201, 255, 0.07);
   border-color: rgba(88, 201, 255, 0.32);
-  color: var(--neon-cyan);
+  color: var(--sage);
 }
 
 .btn-ghost:hover {
@@ -611,19 +647,30 @@ body[data-theme="night"] .social-link {
 }
 
 a {
-  color: var(--neon-cyan);
+  color: var(--sage);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
 }
 
 a:hover {
   color: var(--neon-magenta);
 }
 
+body[data-theme="night"] a:hover {
+  color: #ff9fe0;
+}
+
 a:focus-visible,
 .btn:focus-visible,
 .mode-toggle:focus-visible,
-.primary-link:focus-visible {
-  outline: 2px solid var(--neon-cyan);
+.primary-link:focus-visible,
+.social-link:focus-visible {
+  outline: 2px solid var(--focus-ring);
   outline-offset: 3px;
+}
+
+main:focus-visible {
+  outline: none;
 }
 
 footer {
@@ -720,6 +767,13 @@ main > section.reveal.is-visible {
     justify-content: flex-start;
   }
 
+  .primary-link,
+  .mode-toggle,
+  .btn,
+  .social-link {
+    min-height: 44px;
+  }
+
   .grid-section,
   .projects-grid,
   .social-grid,
@@ -749,5 +803,44 @@ main > section.reveal.is-visible {
   .social,
   .contact {
     padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta .btn,
+  .contact-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .site-header,
+  main {
+    width: min(1120px, 94vw);
+  }
+}
+
+@media (prefers-contrast: more) {
+  .card,
+  .project-card,
+  .hero,
+  .about,
+  .contact,
+  .social,
+  .field-notes,
+  .statement {
+    border-width: 2px;
+  }
+
+  a,
+  .primary-link,
+  .btn-ghost {
+    color: #0f4e61;
+  }
+
+  body[data-theme="night"] a,
+  body[data-theme="night"] .primary-link,
+  body[data-theme="night"] .btn-ghost {
+    color: #b6f8ef;
   }
 }

@@ -67,6 +67,7 @@
     </script>
   </head>
   <body data-page="home" data-theme="day">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="background-layer" aria-hidden="true"></div>
     <div class="page-progress" aria-hidden="true">
       <span class="page-progress-bar"></span>
@@ -79,11 +80,12 @@
       </div>
       <div class="header-actions">
         <nav class="nav-links" aria-label="Primary">
+          <a class="primary-link" href="index.html" aria-current="page">Home</a>
           <a class="primary-link" href="projects.html">Projects</a>
-          <a class="primary-link" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noreferrer"
+          <a class="primary-link" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noopener noreferrer"
             >SouthernArizonaMarketingSystems.com</a
           >
-          <a class="primary-link" href="https://www.linkedin.com/in/michaela-silva-436a8a24b" target="_blank" rel="noreferrer"
+          <a class="primary-link" href="https://www.linkedin.com/in/michaela-silva-436a8a24b" target="_blank" rel="noopener noreferrer"
             >LinkedIn Profile</a
           >
         </nav>
@@ -91,12 +93,12 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero reveal">
+    <main id="main-content" tabindex="-1">
+      <section class="hero reveal" aria-labelledby="home-hero-title">
         <div class="hero-layout">
           <div class="hero-copy">
             <p class="eyebrow">Field Journal 01 • Builder / Artist / Operator</p>
-            <h1>
+            <h1 id="home-hero-title">
               I build worlds in the browser,
               <span>shape culture in real life,</span>
               and make records as Money Meeks.
@@ -124,9 +126,9 @@
         </div>
       </section>
 
-      <section id="about" class="about reveal">
+      <section id="about" class="about reveal" aria-labelledby="about-heading">
         <p class="section-label">Identity</p>
-        <h2>About Me</h2>
+        <h2 id="about-heading">About Me</h2>
         <p>
           I am <strong>Micka Silva</strong>, also known as <strong>Money Meeks</strong>. I am currently a
           biomedical science student at Arizona State University, with plans to continue toward becoming a
@@ -153,16 +155,17 @@
         </p>
       </section>
 
-      <section class="section-intro reveal">
+      <section class="section-intro reveal" aria-labelledby="selected-work-heading">
         <p class="section-label">Selected Work</p>
-        <h2>Three lanes, one point of view</h2>
+        <h2 id="selected-work-heading">Three lanes, one point of view</h2>
         <p>
           The thread running through all of it is the same: make something memorable, make it useful, and give
           it enough edge that it does not disappear into the background.
         </p>
       </section>
 
-      <section id="work" class="grid-section">
+      <section id="work" class="grid-section" aria-labelledby="work-heading">
+        <h2 id="work-heading" class="sr-only">Work Highlights</h2>
         <article class="card reveal">
           <h2>Marketing Business</h2>
           <p>
@@ -184,11 +187,11 @@
           </p>
           <p>
             I also developed and designed
-            <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noreferrer">the Arctic Circle website</a>,
+            <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noopener noreferrer">the Arctic Circle website</a>,
             a digital home that highlights the venue, events, and brand vibe.
           </p>
           <p>
-            <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noreferrer">Visit The Arctic Circle</a>
+            <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noopener noreferrer">Visit The Arctic Circle</a>
           </p>
           <ul>
             <li>Daily operations management</li>
@@ -204,10 +207,10 @@
             that is authentic, sharp, and hard to ignore.
           </p>
           <p>
-            <a href="https://www.instagram.com/moneymeeks777/" target="_blank" rel="noreferrer">Follow @moneymeeks777 on Instagram</a>
+            <a href="https://www.instagram.com/moneymeeks777/" target="_blank" rel="noopener noreferrer">Follow @moneymeeks777 on Instagram</a>
           </p>
           <p>
-            <a href="https://youtube.com/@moneymeeks2375?si=qXHFbJ45Eas8tCo8" target="_blank" rel="noreferrer">Watch Money Meeks on YouTube</a>
+            <a href="https://youtube.com/@moneymeeks2375?si=qXHFbJ45Eas8tCo8" target="_blank" rel="noopener noreferrer">Watch Money Meeks on YouTube</a>
           </p>
           <ul>
             <li>Original songwriting and recording</li>
@@ -217,7 +220,8 @@
         </article>
       </section>
 
-      <section class="statement reveal">
+      <section class="statement reveal" aria-labelledby="manifesto-heading">
+        <h2 id="manifesto-heading" class="sr-only">Manifesto</h2>
         <p class="section-label">Manifesto</p>
         <p>
           I believe business and art are both vehicles for impact. My mission is to build systems that create
@@ -225,10 +229,10 @@
         </p>
       </section>
 
-      <section id="field-notes" class="field-notes reveal">
+      <section id="field-notes" class="field-notes reveal" aria-labelledby="field-notes-heading">
         <div class="section-intro">
           <p class="section-label">Field Notes</p>
-          <h2>What feeds the work</h2>
+          <h2 id="field-notes-heading">What feeds the work</h2>
           <p>
             The site is not just a list of credentials. It is closer to a notebook: places I draw from,
             disciplines I move between, and the kind of weekends that remind me why I build at all.
@@ -263,47 +267,47 @@
         </div>
       </section>
 
-      <section id="social" class="social reveal">
+      <section id="social" class="social reveal" aria-labelledby="social-heading">
         <p class="section-label">Links</p>
-        <h2>Find Me Online</h2>
+        <h2 id="social-heading">Find Me Online</h2>
         <p>Connect with Micka Silva and Money Meeks across every platform.</p>
         <div class="social-grid">
-          <a class="social-link" href="https://www.linkedin.com/in/michaela-silva-436a8a24b" target="_blank" rel="noreferrer">
+          <a class="social-link" href="https://www.linkedin.com/in/michaela-silva-436a8a24b" target="_blank" rel="noopener noreferrer">
             LinkedIn
             <span>Professional updates and business network</span>
           </a>
-          <a class="social-link" href="https://www.instagram.com/moneymeeks777/" target="_blank" rel="noreferrer">
+          <a class="social-link" href="https://www.instagram.com/moneymeeks777/" target="_blank" rel="noopener noreferrer">
             Instagram
             <span>Behind-the-scenes, brand life, and artist content</span>
           </a>
-          <a class="social-link" href="https://youtube.com/@moneymeeks2375?si=qXHFbJ45Eas8tCo8" target="_blank" rel="noreferrer">
+          <a class="social-link" href="https://youtube.com/@moneymeeks2375?si=qXHFbJ45Eas8tCo8" target="_blank" rel="noopener noreferrer">
             YouTube
             <span>Music videos, releases, and performance content</span>
           </a>
         </div>
       </section>
 
-      <section id="contact" class="contact reveal">
+      <section id="contact" class="contact reveal" aria-labelledby="contact-heading">
         <p class="section-label">Next Move</p>
-        <h2>Let’s Build Something Real</h2>
+        <h2 id="contact-heading">Let’s Build Something Real</h2>
         <p>
           Looking for marketing strategy, business leadership, or creative collaboration? Reach out, and let's
           make your next move count.
         </p>
         <div class="contact-actions">
-          <a class="btn btn-solid" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noreferrer"
+          <a class="btn btn-solid" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noopener noreferrer"
             >Visit Marketing Site</a
           >
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/michaela-silva-436a8a24b" target="_blank" rel="noreferrer"
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/michaela-silva-436a8a24b" target="_blank" rel="noopener noreferrer"
             >Connect on LinkedIn</a
           >
-          <a class="btn btn-ghost" href="https://www.instagram.com/moneymeeks777/" target="_blank" rel="noreferrer"
+          <a class="btn btn-ghost" href="https://www.instagram.com/moneymeeks777/" target="_blank" rel="noopener noreferrer"
             >Instagram: @moneymeeks777</a
           >
-          <a class="btn btn-ghost" href="https://youtube.com/@moneymeeks2375?si=qXHFbJ45Eas8tCo8" target="_blank" rel="noreferrer"
+          <a class="btn btn-ghost" href="https://youtube.com/@moneymeeks2375?si=qXHFbJ45Eas8tCo8" target="_blank" rel="noopener noreferrer"
             >YouTube: @moneymeeks2375</a
           >
-          <a class="btn btn-ghost" href="#top">Back to Top</a>
+          <a class="btn btn-ghost" href="#top" aria-label="Back to top of page">Back to Top</a>
         </div>
       </section>
     </main>

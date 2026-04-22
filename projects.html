@@ -65,6 +65,7 @@
     </script>
   </head>
   <body data-page="projects" data-theme="day">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="background-layer" aria-hidden="true"></div>
     <div class="page-progress" aria-hidden="true">
       <span class="page-progress-bar"></span>
@@ -78,7 +79,8 @@
       <div class="header-actions">
         <nav class="nav-links" aria-label="Primary">
           <a class="primary-link" href="index.html">Home</a>
-          <a class="primary-link" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noreferrer"
+          <a class="primary-link" href="projects.html" aria-current="page">Projects</a>
+          <a class="primary-link" href="https://SouthernArizonaMarketingSystems.com" target="_blank" rel="noopener noreferrer"
             >SouthernArizonaMarketingSystems.com</a
           >
         </nav>
@@ -86,12 +88,12 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero reveal">
+    <main id="main-content" tabindex="-1">
+      <section class="hero reveal" aria-labelledby="projects-hero-title">
         <div class="hero-layout">
           <div class="hero-copy">
             <p class="eyebrow">Selected Work • Live Projects</p>
-            <h1>
+            <h1 id="projects-hero-title">
               Case studies in
               <span>web design, business,</span>
               and sound.
@@ -118,16 +120,17 @@
         </div>
       </section>
 
-      <section class="section-intro reveal">
+      <section class="section-intro reveal" aria-labelledby="projects-intro-heading">
         <p class="section-label">Case Studies</p>
-        <h2>Proof with atmosphere</h2>
+        <h2 id="projects-intro-heading">Proof with atmosphere</h2>
         <p>
           The goal is not just to make things look good. It is to give each project a clear point of view, a
           clear function, and enough polish to be memorable.
         </p>
       </section>
 
-      <section class="projects-grid">
+      <section class="projects-grid" aria-labelledby="projects-grid-heading">
+        <h2 id="projects-grid-heading" class="sr-only">Project Categories</h2>
         <article id="web-design" class="project-card featured reveal">
           <h2>Web Design Projects</h2>
           <p>
@@ -138,7 +141,7 @@
             <strong>The Arctic Circle Website</strong> is a web development and design project for a Bisbee,
             AZ hospitality venue. It gives visitors a clear view of events, atmosphere, and updates while
             making it easy to connect with the brand online.
-            <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noreferrer">View the site</a>.
+            <a href="https://arcticcirclebisbeeaz.com/" target="_blank" rel="noopener noreferrer">View the site</a>.
           </p>
           <div class="project-meta">
             <p><span>Role</span> Design, development, content structure</p>
@@ -184,10 +187,10 @@
         </article>
       </section>
 
-      <section class="field-notes reveal">
+      <section class="field-notes reveal" aria-labelledby="projects-process-heading">
         <div class="section-intro">
           <p class="section-label">Process</p>
-          <h2>How I shape a build</h2>
+          <h2 id="projects-process-heading">How I shape a build</h2>
         </div>
         <div class="timeline compact">
           <article class="timeline-entry reveal">
@@ -208,13 +211,13 @@
         </div>
       </section>
 
-      <section class="contact reveal">
+      <section class="contact reveal" aria-labelledby="projects-contact-heading">
         <p class="section-label">Continue</p>
-        <h2>Explore More</h2>
+        <h2 id="projects-contact-heading">Explore More</h2>
         <p>See the full profile, social links, and contact options on the main portfolio page.</p>
         <div class="contact-actions">
           <a class="btn btn-solid" href="index.html">Back to Main Portfolio</a>
-          <a class="btn btn-ghost" href="https://youtube.com/@moneymeeks2375?si=qXHFbJ45Eas8tCo8" target="_blank" rel="noreferrer"
+          <a class="btn btn-ghost" href="https://youtube.com/@moneymeeks2375?si=qXHFbJ45Eas8tCo8" target="_blank" rel="noopener noreferrer"
             >Watch on YouTube</a
           >
         </div>

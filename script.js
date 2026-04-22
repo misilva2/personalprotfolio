@@ -12,7 +12,10 @@ const syncThemeLabel = () => {
     return;
   }
 
-  modeToggle.textContent = body.dataset.theme === "night" ? "Day Mode" : "After Dark";
+  const isNightTheme = body.dataset.theme === "night";
+  modeToggle.textContent = isNightTheme ? "Day Mode" : "After Dark";
+  modeToggle.setAttribute("aria-pressed", String(isNightTheme));
+  modeToggle.setAttribute("aria-label", isNightTheme ? "Switch to day mode" : "Switch to night mode");
 };
 
 if (savedTheme === "day" || savedTheme === "night") {
