@@ -510,19 +510,22 @@ body[data-theme="night"] .project-meta {
   margin-top: 1.3rem;
   padding: 1.5rem;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(37, 24, 15, 0.18);
-  background: linear-gradient(145deg, rgba(88, 201, 255, 0.26), rgba(180, 90, 50, 0.32), rgba(240, 108, 194, 0.22));
-  color: #f8f5ef;
+  border: 1px solid rgba(37, 24, 15, 0.26);
+  background: linear-gradient(145deg, rgba(26, 79, 94, 0.9), rgba(120, 56, 34, 0.88), rgba(112, 36, 84, 0.86));
+  color: #fffaf2;
+  box-shadow: 0 20px 34px rgba(18, 9, 12, 0.32), var(--shadow-hard);
 }
 
 body[data-theme="night"] .statement {
-  background: linear-gradient(145deg, rgba(88, 201, 255, 0.2), rgba(180, 90, 50, 0.22), rgba(240, 108, 194, 0.24));
+  border-color: rgba(244, 237, 248, 0.28);
+  background: linear-gradient(145deg, rgba(32, 96, 114, 0.84), rgba(130, 60, 37, 0.82), rgba(122, 39, 94, 0.84));
 }
 
 .statement p {
   margin: 0;
   font-size: clamp(1.08rem, 2.7vw, 1.5rem);
   font-weight: 600;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.34);
 }
 
 .field-notes {
