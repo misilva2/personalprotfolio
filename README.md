@@ -98,3 +98,43 @@ She approaches every project — a website, a campaign, a record — as a system
 - [Instagram @moneymeeks777](https://www.instagram.com/moneymeeks777/)
 - [YouTube @moneymeeks2375](https://youtube.com/@moneymeeks2375)
 - [SouthernArizonaMarketingSystems.com](https://SouthernArizonaMarketingSystems.com)
+
+---
+
+## A Living Project — Coming Back to It Over Time
+
+This portfolio was not built in a single sitting. It has been a recurring project — something returned to at different points in time to add content, fix issues, improve quality, and reflect a more accurate picture of where the work stands. New sections, improved accessibility, a scroll-fade effect, the projects page, and this README were all added in separate passes rather than shipped all at once.
+
+That pattern is deliberate. A portfolio should evolve at the same pace as the person it represents.
+
+---
+
+## Real Challenges Faced
+
+### Debugging JavaScript
+
+JavaScript was one of the harder parts to get right. The scroll-fade behavior — where sections soften as they move out of focus while scrolling — required understanding `IntersectionObserver`, `requestAnimationFrame`, and how CSS custom properties can be updated dynamically at runtime. Early versions had sections fading out too aggressively, making content like the Manifesto unreadable mid-scroll. Tracking down *why* a specific section was getting dimmed while others were not required reading the observer logic carefully, isolating the selector, and testing the threshold math until the behavior felt intentional rather than broken.
+
+The theme toggle also had a subtle bug: the `aria-label` and `aria-pressed` state were not being set on initial load — only after the first click. This meant screen readers announced an incorrect state to users who had a saved theme preference. Finding it required thinking through the full execution path, not just the click handler.
+
+### Git Push and Pull Issues
+
+At one point the local branch and the remote on GitHub diverged. The remote had a `CNAME` commit that was not in the local history, and local had new commits the remote had not seen. Running a plain `git push` was blocked. Running `git pull` without a strategy would have created a messy merge commit. The fix was `git pull --rebase origin main` — replaying local commits on top of the updated remote history — followed by a clean push. Understanding *why* that works (rebasing rewrites the local history so it starts from the current remote tip) was the real lesson, not just running the command.
+
+---
+
+## Using AI as a Learning Tool
+
+Throughout this project, AI (GitHub Copilot) was used not as a shortcut but as a thinking partner. When something broke, the approach was to describe what was happening, read the explanation, and then understand *why* the fix worked before moving on. That distinction matters.
+
+Some specific things AI helped clarify:
+
+- **Why rebasing is cleaner than merging** when a branch diverges from its remote, and what the commit graph actually looks like in each scenario
+- **How `IntersectionObserver` thresholds work** and why the fade effect was hitting the wrong sections — the fix required adjusting the focus line calculation, not just changing an opacity value
+- **Why `rel="noopener noreferrer"` matters** on external links and what tab-napping is — a security concern that is easy to miss when you are focused on layout
+- **How `aria-labelledby` differs from `aria-label`** and when each is the right choice for assistive technology
+- **What diverged git history looks like** in a commit graph and how to read `ahead N, behind M` branch state before deciding on a resolution strategy
+
+The goal was never to have AI write the code and ship it blindly. The goal was to use it the way a good mentor works: ask a direct question, get a direct answer, push back if it does not make sense, and walk away understanding the thing rather than just having a fix in place.
+
+That approach — treating every bug and blocker as something to learn from rather than just clear — is the same mindset behind everything else in this portfolio.
