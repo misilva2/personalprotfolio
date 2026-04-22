@@ -34,6 +34,9 @@ revealItems.forEach((item, index) => {
   item.dataset.delay = String(index % 4);
 });
 
+const sectionFadeItems = [...document.querySelectorAll("main > section.reveal:not(.statement)")];
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
 const revealObserver = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
@@ -57,6 +60,36 @@ revealItems.forEach((item) => {
 
 const progressBar = document.querySelector(".page-progress-bar");
 
+const updateSectionFade = () => {
+  if (!sectionFadeItems.length) {
+    return;
+  }
+
+  if (reducedMotionQuery.matches) {
+    sectionFadeItems.forEach((item) => {
+      item.style.removeProperty("--scroll-opacity");
+      item.style.removeProperty("--scroll-shift");
+    });
+    return;
+  }
+
+  const viewportHeight = window.innerHeight;
+  const focusLine = viewportHeight * 0.52;
+  const fadeRadius = viewportHeight * 0.72;
+
+  sectionFadeItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    const center = rect.top + rect.height / 2;
+    const distance = Math.abs(center - focusLine);
+    const fadeStrength = Math.max(0, 1 - distance / fadeRadius);
+    const opacity = 0.24 + fadeStrength * 0.76;
+    const shift = (1 - fadeStrength) * 20;
+
+    item.style.setProperty("--scroll-opacity", opacity.toFixed(3));
+    item.style.setProperty("--scroll-shift", `${shift.toFixed(2)}px`);
+  });
+};
+
 const updateScrollProgress = () => {
   if (!progressBar) {
     return;
@@ -72,6 +105,29 @@ const updateScrollProgress = () => {
   progressBar.style.width = `${Math.min(progress, 100)}%`;
 };
 
-updateScrollProgress();
-window.addEventListener("scroll", updateScrollProgress, { passive: true });
-window.addEventListener("resize", updateScrollProgress);
+let scrollTicking = false;
+
+const runScrollEffects = () => {
+  updateScrollProgress();
+  updateSectionFade();
+  scrollTicking = false;
+};
+
+const onScroll = () => {
+  if (scrollTicking) {
+    return;
+  }
+
+  scrollTicking = true;
+  window.requestAnimationFrame(runScrollEffects);
+};
+
+runScrollEffects();
+window.addEventListener("scroll", onScroll, { passive: true });
+window.addEventListener("resize", runScrollEffects);
+
+if (typeof reducedMotionQuery.addEventListener === "function") {
+  reducedMotionQuery.addEventListener("change", runScrollEffects);
+} else if (typeof reducedMotionQuery.addListener === "function") {
+  reducedMotionQuery.addListener(runScrollEffects);
+}
